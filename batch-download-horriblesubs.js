@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Batch Download
-// @version      0.1
+// @version      0.2
 // @description  You can now batch download on horriblesubs.info
 // @author       Cesese
 // @match        https://horriblesubs.info/shows/*
@@ -46,7 +46,7 @@
           q = document.getElementsByName(c)[0].value;
       	else if (document.getElementsByName(c)[1].checked)
           q = document.getElementsByName(c)[1].value;
-      	else 
+      	else
           q = document.getElementsByName(c)[2].value;
         if (!(download(document.getElementsByName(a)[0].value, document.getElementsByName(b)[0].value, q))) {
             // it didn't work
@@ -57,7 +57,7 @@
     function button_download() {
       	var dialog = document.createElement("DIALOG");
       	dialog.setAttribute("open", "open");
-      
+
         var f = document.createElement("form");
         f.setAttribute('method',"post");
         f.setAttribute('action',"submit.php");
@@ -73,39 +73,48 @@
         y.setAttribute('name',"last");
         y.setAttribute('value','1');
         y.setAttribute('min','1');
-      
+
       	var d = document.createElement("DIV");
-				var bra = document.createElement("BR");
-      	var brb = document.createElement("BR");
-     	
-  			var ta = document.createTextNode("480p");
-      	var qa = document.createElement("input"); //input element, radio
-      	qa.setAttribute('type',"radio");
-      	qa.setAttribute('name',"quality");
-      	qa.setAttribute('value',"480p");
-      	
-  			var tb = document.createTextNode("720p");
-      	var qb = document.createElement("input"); //input element, radio
-      	qb.setAttribute('type',"radio");
-      	qb.setAttribute('name',"quality");
-      	qb.setAttribute('value',"720p");
-      	qb.setAttribute('checked',"true");
-      	
-  			var tc = document.createTextNode("1080p");
-      	var qc = document.createElement("input"); //input element, radio
-      	qc.setAttribute('type',"radio");
-      	qc.setAttribute('name',"quality");
-      	qc.setAttribute('value',"1080p");
-      
-      	d.appendChild(ta);
-      	d.appendChild(qa);
-      	d.appendChild(bra);
-      	d.appendChild(tb);
-      	d.appendChild(qb);
-      	d.appendChild(brb);
-      	d.appendChild(tc);
-      	d.appendChild(qc);
-      
+				var br = document.createElement("BR");
+
+        var t3 = document.createTextNode("360p");
+      	var q3 = document.createElement("input"); //input element, radio
+      	q3.setAttribute('type',"radio");
+      	q3.setAttribute('name',"quality");
+      	q3.setAttribute('value',"360p");
+
+  			var t4 = document.createTextNode("480p");
+      	var q4 = document.createElement("input"); //input element, radio
+      	q4.setAttribute('type',"radio");
+      	q4.setAttribute('name',"quality");
+      	q4.setAttribute('value',"480p");
+
+  			var t7 = document.createTextNode("720p");
+      	var q7 = document.createElement("input"); //input element, radio
+      	q7.setAttribute('type',"radio");
+      	q7.setAttribute('name',"quality");
+      	q7.setAttribute('value',"720p");
+      	q7.setAttribute('checked',"true");
+
+  			var t10 = document.createTextNode("1080p");
+      	var q10 = document.createElement("input"); //input element, radio
+      	q10.setAttribute('type',"radio");
+      	q10.setAttribute('name',"quality");
+      	q10.setAttribute('value',"1080p");
+
+      	d.appendChild(t3);
+      	d.appendChild(q3);
+      	d.appendChild(br.cloneNode(true));
+      	d.appendChild(t4);
+      	d.appendChild(q4);
+      	d.appendChild(br.cloneNode(true));
+      	d.appendChild(t7);
+      	d.appendChild(q7);
+        d.appendChild(br.cloneNode(true));
+      	d.appendChild(t10);
+      	d.appendChild(q10);
+
+
         var s = document.createElement("input"); //input element, Submit button
         s.setAttribute('type',"button");
         s.setAttribute('value',"Download");
@@ -115,7 +124,7 @@
         f.appendChild(y);
       	f.appendChild(d);
         f.appendChild(s);
-      
+
       	dialog.appendChild(f);
 
         //and some more input elements here
