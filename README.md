@@ -1,6 +1,6 @@
 # UserScripts by Cesese
 - [Batch Download Horriblesubs](#batch-download-horriblesubs)
-- [MastoFE Light Theme](#masatofe-light-theme)
+- [MastoFE Light Theme](#mastofe-light-theme)
 
 ## General use of scripts
 
