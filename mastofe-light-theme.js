@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         MastoFE light theme
-// @version      0.1
+// @version      0.2
 // @description  Change MastoFE's theme to light on pleroma
-// @author       @cesese@pleroma.bunni.eu
-// @match        https://pleroma.bunni.eu/web/*
+// @author       Cesese
+// @match        https://pleroma.bunni.eu/web*
 // @grant        none
 // ==/UserScript==
 
