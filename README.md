@@ -12,6 +12,8 @@ How to install : copy/paste the content in Tampermonkey or any other Userscript 
 
 ## [MastoFE Light Theme](https://github.com/Cesese/UserScripts-cesese/blob/master/mastofe-light-theme.js)
 
+![picture](.sources/1585693039-sc.png)
+
 ### Configuration
 
 You have to edit the `@match` tag to your instance's mastofe address (/!\\ you need to keep the `*` after the link, it's important)
